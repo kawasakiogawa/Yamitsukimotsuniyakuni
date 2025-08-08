@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ja" itemscope itemtype="https://schema.org/LocalBusiness">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title itemprop="name">やみつきモツ煮屋92</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+  <style>
+    body {
+      background: url('images/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(255, 255, 255, 0.7);
+      z-index: -1;
+    }
+    header {
+      background: url('images/header-banner.jpg') no-repeat center center;
+      background-size: cover;
+      height: 300px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .header-container {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 1rem 2rem;
+      border-radius: 12px;
+    }
+    .menu-section {
+      margin: 5rem auto;
+    }
+    .slider-container .slider {
+      margin-bottom: 2rem;
+    }
+    footer {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    .map-container iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      border: 0;
+      border-radius: 8px;
+    }
+    .contact {
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+    }
+    .contact p {
+      margin: 0.3rem 0;
+    }
+    .social-icons {
+      margin-top: 1rem;
+    }
+    .social-icons a {
+      display: inline-block;
+      margin: 0 0.5rem;
+      text-decoration: none;
+      font-size: 1.4rem;
+      color: #555;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      overflow: hidden;
+      padding: 1rem;
+      text-align: center;
+      max-width: 360px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 480px;
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .card-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="images/shop-logo.png" alt="和の美ロゴ" class="shop-logo" itemprop="logo">
+      <div class="header-text">
+        <h1 itemprop="name">やみつきモツ煮屋92</h1>
+        <p>Uber Eats、出前館、menuで購入できます</p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="menu-nav">
+    <a href="#udon">もつ煮</a>
+    <a href="#takoyaki">モツ煮うどん</a>
+    <a href="#bento">ドリンク</a>
+  </nav>
+
+  <main class="slider-container">
+    <section id="udon" class="menu-section">
+      <h2 class="section-title">もつ煮</h2>
+      <div class="slider udon-slider">
+        <div class="card">
+          <img src="images/motunabe/motunabe1" alt="冷凍うどん">
+          <div class="card-content">
+            <h3>もつ煮皿（並）</h3>
+            <p>トロッとした柔らかさ。臭みのない自慢のモツ煮です！おつまみやおかずの一品にどうぞ。一人前の量になっています。<br>価格：￥1,230</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/motunabe/motunabe2.webp" alt="かまたまうどん">
+          <div class="card-content">
+            <h3>旨辛もつ煮皿(並)</h3>
+            <p>新発売！！<br>旨辛味の登場です。<br>ピリッとした辛味、あと引く旨さ。<br>是非ご賞味下さいませ。<br>価格：￥1,280</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/motunabe/motunabe3.webp" alt="冷凍うどん">
+          <div class="card-content">
+            <h3>カレーもつ煮皿(並)</h3>
+            <p>カレー味の登場です。<br>オリジナルのもつ煮味をちゃんと残し、ご飯に良く合う味に仕上げました！<br>是非ご賞味下さいませ。<br>価格：￥1,280</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/motunabe/motunabe4.webp" alt="かまたまうどん">
+          <div class="card-content">
+            <h3>もつ煮皿（大）</h3>
+            <p>トロッとした柔らかさ、ご飯が進む味。<br>残った汁でチャーハンに炒めたり、納豆を乗せてみたりとめちゃくちゃご飯に合っちゃいます！是非ご賞味下さいませ。<br>価格：￥1,470</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/motunabe/motunabe5.webp" alt="かまたまうどん">
+          <div class="card-content">
+            <h3>旨辛もつ煮皿(大)</h3>
+            <p>新発売！！<br>旨辛味の登場です。<br>ピリッとした辛味、あと引く旨さ<br>是非ご賞味下さいませ♪<br>価格：￥1,520</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/motunabe/motunabe6.webp" alt="かまたまうどん">
+          <div class="card-content">
+            <h3>カレーもつ煮皿(大)</h3>
+            <p>新発売！<br>カレー味の登場です。<br>オリジナルもつ煮の味をちゃんと残して　<br>ご飯に良く合う味に仕上げました！<br>是非ご賞味下さいませ。<br>価格：￥1,520</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/motunabe/motunabe7.webp" alt="かまたまうどん">
+          <div class="card-content">
+            <h3>もつ煮丼（並）</h3>
+            <p>もつ煮＝400g(スープ込み)<br>ご飯並＝200g<br>女性に人気の具、ご飯が並の一品です！<br>こちらの量でも満足頂けると思います。<br>やみつきになる事間違いなしです。<br>価格：￥1,470</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/motunabe/motunabe8.webp" alt="旨辛もつ煮丼(並)">
+          <div class="card-content">
+            <h3>旨辛もつ煮丼(並)</h3>
+            <p>新発売！！<br>旨辛味の登場です。<br>ピリッとした辛味、あと引く旨さ<br>是非ご賞味下さいませ♪<br>ご飯　200g<br>価格：￥1,520</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/motunabe/motunabe9.webp" alt="カレーもつ煮丼(並)">
+          <div class="card-content">
+            <h3>カレーもつ煮丼(並)</h3>
+            <p>新発売！<br><br>カレー味の登場です。<br>オリジナルのもつ煮味をちゃんと残し、ご飯に良く合う味に仕上げました！<br>是非ご賞味下さいませ。<br>価格：￥1,520</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/motunabe/motunabe10.webp" alt="もつ煮丼（具大）">
+          <div class="card-content">
+            <h3>もつ煮丼（具大）</h3>
+            <p>もつ煮＝550g(スープ込み)<br>ご飯並＝200g<br>トロッとした柔らかさ、臭みのないモツ煮です。<br>ご飯にとても良く合う味噌味です！<br>おつまみやおかずの一品に！<br>満足頂ける量です。<br>価格：￥1,700</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="images/motunabe/motunabe11.webp" alt="旨辛もつ煮丼(具大)">
+          <div class="card-content">
+            <h3>旨辛もつ煮丼(具大)</h3>
+            <p>新発売！！<br>旨辛味の登場です。<br>ピリッとした辛味、あと引く旨さ<br>是非ご賞味下さいませ♪<br>ご飯200g<br>価格：￥1,750</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+
+          <div class="card">
+          <img src="images/motunabe/motunabe12.webp" alt="カレーもつ煮丼(具大)">
+          <div class="card-content">
+            <h3>カレーもつ煮丼(具大)</h3>
+            <p>新発売！<br>カレーもつ煮の登場です。<br>オリジナルもつ煮の味をちゃんと残して<br>ご飯に良く合う味に仕上げました！<br>是非ご賞味下さいませ。<br>価格：￥1,750</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+
+                <div class="card">
+          <img src="images/motunabe/motunabe13.webp" alt="もつ煮丼（ご飯大）">
+          <div class="card-content">
+            <h3>もつ煮丼（ご飯大）</h3>
+            <p>ご飯大盛り＝300g<br>ご飯にとても合う当店のモツ煮です！<br>モツ煮は並、ご飯は大盛りです。<br>価格：￥1,620</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+
+                <div class="card">
+          <img src="images/motunabe/motunabe14.webp" alt="旨辛もつ煮丼(ご飯大)">
+          <div class="card-content">
+            <h3>旨辛もつ煮丼(ご飯大)</h3>
+            <p>新発売！！<br>旨辛味の登場です。<br>ピリッとした辛味、あと引く旨さ<br>是非ご賞味下さいませ♪<br>ご飯300g<br>価格：￥1,670</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+
+                <div class="card">
+          <img src="images/motunabe/motunabe15.webp" alt="カレーもつ煮丼(ご飯大)">
+          <div class="card-content">
+            <h3>カレーもつ煮丼(ご飯大)</h3>
+            <p>新発売！<br>カレー味の登場です。<br>オリジナルの味をしっかり残し<br>ご飯に良く合う味に仕上げました！<br>是非ご賞味下さいませ。<br>価格：￥1,670</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+
+                <div class="card">
+          <img src="images/motunabe/motunabe16.webp" alt="【人気No.1🥇】もつ煮丼（具大.ご飯大）">
+          <div class="card-content">
+            <h3>【人気No.1🥇】もつ煮丼（具大.ご飯大）</h3>
+            <p>もつ煮大盛り＝550g(スープ込み)<br>ご飯大盛り＝300g<br>当店1番人気のモツ煮大盛り、ご飯大盛りです。男性の方もかなり満足して頂ける量です。是非ご賞味下さい！<br>価格：￥1,850</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+
+                <div class="card">
+          <img src="images/motunabe/motunabe17.webp" alt="旨辛もつ煮丼(具大、ご飯大)">
+          <div class="card-content">
+            <h3>旨辛もつ煮丼(具大、ご飯大)</h3>
+            <p>新発売！！<br>旨辛味の登場です。<br>ピリッとした辛味、あと引く旨さ<br>是非ご賞味下さいませ♪ <br>ご飯300g<br>価格：￥1,900</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+
+                <div class="card">
+          <img src="images/motunabe/motunabe18.webp" alt="カレーもつ煮丼(具大、ご飯大)">
+          <div class="card-content">
+            <h3>カレーもつ煮丼(具大、ご飯大)</h3>
+            <p>新発売！<br>カレー味の登場です。<br>オリジナルもつ煮の味をしっかり残し<br>ご飯に良く合う味に仕上げました！<br>是非ご賞味下さいませ。<br>価格：￥1,900</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+
+                <div class="card">
+          <img src="images/motunabe/motunabe19.webp" alt="温泉たまご">
+          <div class="card-content">
+            <h3>温泉たまご</h3>
+            <p>モツ煮とご飯に一工夫！<br>汁もたっぷり温泉たまごとご一緒に。<br>最高の一品です。<br>価格：￥150</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+
+                <div class="card">
+          <img src="images/motunabe/motunabe20.webp" alt="うどん">
+          <div class="card-content">
+            <h3>うどん</h3>
+            <p>もつ煮丼➕うどん食べたい時に！！<br>欲張っちゃおー！<br>価格：￥300</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <section id="takoyaki" class="menu-section">
+      <h2 class="section-title">モツ煮うどん</h2>
+      <div class="slider takoyaki-slider">
+        <div class="card">
+          <img src="images/udon/udon1.webp" alt="もつ煮うどん(並)">
+          <div class="card-content">
+            <h3>もつ煮うどん(並)</h3>
+            <p>ネギをたっぷり乗せて！！<br>➕温泉のせは最高です♪<br>こちら具大の商品です。うどんの後にご飯も<br>楽しめます。<br>価格：￥1,520</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/udon/udon2.webp" alt="旨辛もつ煮うどん(並)">
+          <div class="card-content">
+            <h3>旨辛もつ煮うどん(並)</h3>
+            <p>新発売！！<br>旨辛味の登場です。<br>ピリッとした辛味、あと引く旨さ<br>是非ご賞味下さいませ♪<br>うどん200g<br>価格：￥1,570</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/udon/udon3.webp" alt="カレーもつ煮うどん(並)">
+          <div class="card-content">
+            <h3>カレーもつ煮うどん(並)</h3>
+            <p>新発売！<br>オリジナルもつ煮の味をしっかり残し<br>うどんに良く合う味に仕上げました！<br>是非ご賞味下さいませ。<br>価格：￥1,570</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/udon/udon4.webp" alt="もつ煮うどん(具大)">
+          <div class="card-content">
+            <h3>もつ煮うどん(具大)</h3>
+            <p>ネギをたっぷり乗せて！！<br>➕温泉のせは最高です♪<br>こちら具大の商品です。うどんの後にご飯も<br>楽しめます。<br>価格：￥1,750</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="bento" class="menu-section">
+      <h2 class="section-title">ドリンク</h2>
+      <div class="slider bento-slider">
+        <div class="card">
+          <img src="images/drink/drink1.webp" alt="緑茶 500ml">
+          <div class="card-content">
+            <h3>緑茶 500ml</h3>
+            <p><br>価格：¥160</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/drink/drink2.webp" alt="烏龍茶">
+          <div class="card-content">
+            <h3>烏龍茶</h3>
+            <p>食事と一緒に！<br>価格：¥160</p>
+            <div class="links">
+              <a class="ubereats" href="https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw"
+   onclick="openUberEats(event)">Uber Eats</a>
+              <a class="demaecan" href="https://demae-can.com/shop/menu/3384398"
+   onclick="openDemaeCan(event)">出前館</a>
+              <!-- <a class="menu" href="#">menu</a> -->
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+  </main>
+
+  <footer itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+    <h2>店舗情報</h2>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3284.8640535819323!2d139.6984763!3d35.5285228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v169?timestamp?location?embed?etc"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    <div class="contact">
+      <p itemprop="streetAddress">神奈川県川崎市川崎区駅前本町</p>
+      <p>電話番号：<span itemprop="telephone">044-123-4567</span></p>
+      <p>メール：<span itemprop="email">info@wanobi.jp</span></p>
+      <p>営業時間：10:00〜20:00（年中無休）</p>
+    </div>
+    <div class="social-icons">
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+      $('.slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        adaptiveHeight: false, // 고정 높이 유지
+        centerMode: true,
+        centerPadding: '10%',
+        autoplay: true,
+        autoplaySpeed: 4000
+      });
+
+      // 카드 높이 통일 JS (보조)
+      function unifyCardHeights(sliderSelector) {
+        const cards = document.querySelectorAll(`${sliderSelector} .card`);
+        let maxHeight = 0;
+        cards.forEach(card => {
+          card.style.height = 'auto';
+          maxHeight = Math.max(maxHeight, card.offsetHeight);
+        });
+        cards.forEach(card => card.style.height = maxHeight + 'px');
+      }
+
+      unifyCardHeights('.slider');
+      window.addEventListener('resize', () => unifyCardHeights('.slider'));
+    });
+  </script>
+  <script>
+
+function isMobileDevice() {
+  return /iphone|ipad|ipod|android/i.test(navigator.userAgent);
+}
+
+function openDemaeCan(event) {
+  if (!isMobileDevice()) return; // PC는 그냥 기본 링크로
+
+  event.preventDefault();
+
+  const deeplink = 'demaecan://shop/3384398';
+  const fallback = 'https://demae-can.com/shop/menu/3384398';
+
+  // Deeplink 시도
+  window.location = deeplink;
+
+  // 앱이 없으면 fallback (1.5초 후)
+  setTimeout(() => {
+    window.location.href = fallback;
+  }, 1500);
+}
+
+function openUberEats(event) {
+  const userAgent = navigator.userAgent.toLowerCase();
+  const isMobile = /iphone|ipad|android/.test(userAgent);
+  const storeUuid = 'mTDKGjkYVpiGmjbexDGnLw';
+  const deeplink = `ubereats://store?storeUuid=${storeUuid}`;
+  const fallbackUrl = 'https://www.ubereats.com/jp/store/%E3%82%84%E3%81%BF%E3%81%A4%E3%81%8D%E3%83%A2%E3%83%84%E7%85%AE%E5%B1%8B-92-yamitsukimotsuniya-kuni/mTDKGjkYVpiGmjbexDGnLw';
+
+  if (isMobile) {
+    // 딥링크 시도 → 실패 시 fallback
+    window.location = deeplink;
+
+    setTimeout(() => {
+      window.location.href = fallbackUrl;
+    }, 1500); // 앱 설치 안된 경우 fallback (1.5초 후)
+    event.preventDefault();
+  }
+  // PC에서는 그냥 링크 이동
+}
+</script>
+</body>
+</html>
