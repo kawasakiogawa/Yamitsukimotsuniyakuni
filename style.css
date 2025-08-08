@@ -47,26 +47,11 @@ header {
   text-align: center;
   max-width: 360px;
   margin: 0 auto;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
 }
 
 .card img {
   width: 100%;
-  height: 200px;              /* 고정된 높이 */
-  object-fit: cover;          /* 비율 유지하면서 자르기 */
   border-radius: 8px;
-}
-
-.card-content {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
 }
 
 .card-content h2 {
@@ -107,7 +92,6 @@ header {
 
 .menu-nav a {
   display: inline-block;
-  margin: 0 1rem;
   padding: 0.5rem 1rem;
   background-color: #333;
   color: white;
@@ -117,13 +101,17 @@ header {
 }
 
 .menu-section {
-  margin: 5rem 0;
+  margin: 4rem 0;
 }
 
 .section-title {
   text-align: center;
   font-size: 1.6rem;
   margin-bottom: 1.5rem;
+}
+
+.menu-section {
+  margin: 5rem 0;
 }
 
 .slider .card {
