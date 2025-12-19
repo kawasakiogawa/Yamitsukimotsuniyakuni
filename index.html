@@ -112,6 +112,136 @@
     list-style: none;
     text-align: center;
     }
+
+     /* ===== 通信販売セクション ===== */
+  .shop-section {
+    width: min(1100px, 92%);
+    margin: 2.5rem auto 0;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid #e6e6e6;
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  }
+
+  .shop-section .shop-title {
+    margin: 0;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .shop-section .shop-note {
+    margin: 0.5rem 0 1.2rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 모바일: 2개/줄 */
+    gap: 12px;
+  }
+
+  /* 화면이 넓으면 3~4개로 자동 확장 */
+  @media (min-width: 768px) {
+    .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+  @media (min-width: 1024px) {
+    .product-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  }
+
+  .product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    min-height: 260px;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .product-body {
+    padding: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    flex: 1;
+  }
+
+  .product-name {
+    font-weight: 700;
+    font-size: 0.98rem;
+    margin: 0;
+  }
+
+  .product-desc {
+    margin: 0;
+    font-size: 0.88rem;
+    color: #444;
+    line-height: 1.35;
+  }
+
+  .product-price {
+    margin: 0.2rem 0 0;
+    font-weight: 700;
+  }
+
+  .product-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 8px;
+  }
+
+  .product-actions a {
+    flex: 1;
+    text-align: center;
+    padding: 0.55rem 0.6rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: 1px solid #ddd;
+    color: #333;
+    background: #f7f7f7;
+  }
+
+  .product-actions a.primary {
+    background: #111;
+    border-color: #111;
+    color: #fff;
+  }
+
+  /* 상단 "SHOPを見る" 버튼 */
+  .shop-cta {
+    margin: 0.8rem auto 1.2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .shop-cta a {
+    display: inline-block;
+    padding: 0.8rem 1.1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 800;
+    background: #111;
+    color: #fff;
+    border: 1px solid #111;
+    min-width: 220px;
+    text-align: center;
+  }
+
+  .shop-cta a:hover {
+    opacity: 0.92;
+  }
   </style>
 </head>
 <body>
@@ -130,6 +260,108 @@
     <a href="#takoyaki">モツ煮うどん</a>
     <a href="#bento">ドリンク</a>
   </nav>
+
+<section class="shop-section" id="online-shop">
+  <h2 class="shop-title">通信販売</h2>
+  <p class="shop-note">通信販売開始しました！</p>
+
+  <!-- ✅ 타이틀/문구 아래 SHOP 보러가기 버튼 -->
+  <div class="shop-cta">
+    <a href="https://to.payid.jp/N4L9?deep_link_value=baseec%3A%2F%2Fshop%3Fshop_id%3Dyamitukimotu-base-shop&pid=app_share&c=share_shop_yamitukimotu-base-shop&af_dp=baseec%3A%2F%2Fshop%3Fshop_id%3Dyamitukimotu-base-shop&is_retargeting=true&af_retargeting_window=30d&af_inactivity_window=7d" target="_blank" rel="noopener noreferrer">SHOPを見る</a>
+  </div>
+
+  <div class="product-grid">
+    <!-- 상품 1 -->
+    <article class="product-card">
+      <img src="images/shop/menu1.png" alt="冷凍もつ煮（2人前）">
+      <div class="product-body">
+        <p class="product-name">もつ煮3パックセット　味噌味3</p>
+        <p class="product-desc">この商品は、味噌味のもつ煮が3パックのセットです。  
+500g✖︎3</p>
+        <p class="product-price">価格：¥2,700</p>
+        <div class="product-actions">
+          <a href="https://to.payid.jp/N4L9?deep_link_value=baseec%3A%2F%2Fitem%3Fitem_id%3D123461197&pid=app_share&c=share_item_yamitukimotu-base-shop&af_dp=baseec%3A%2F%2Fitem%3Fitem_id%3D123461197&is_retargeting=true&af_retargeting_window=30d&af_inactivity_window=7d&af_web_dp=https%3A%2F%2Fpayid.jp%2Fitem%2F123461197" target="_blank" rel="noopener noreferrer" class="primary">購入する</a>
+          <a href="https://x.gd/wueeO" target="_blank" rel="noopener noreferrer">SHOPを見る</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 상품 2 -->
+    <article class="product-card">
+      <img src="images/shop/menu2.png" alt="旨辛 冷凍もつ煮（2人前）">
+      <div class="product-body">
+        <p class="product-name">もつ煮3種×1 セット</p>
+        <p class="product-desc">この商品は、3種類のもつ煮がそれぞれ1パックずつ、合計3パックのセットです。
+500g✖︎3</p>
+        <p class="product-price">価格：¥2,700</p>
+        <div class="product-actions">
+          <a href="https://to.payid.jp/N4L9?deep_link_value=baseec%3A%2F%2Fitem%3Fitem_id%3D123339101&pid=app_share&c=share_item_yamitukimotu-base-shop&af_dp=baseec%3A%2F%2Fitem%3Fitem_id%3D123339101&is_retargeting=true&af_retargeting_window=30d&af_inactivity_window=7d&af_web_dp=https%3A%2F%2Fpayid.jp%2Fitem%2F123339101" target="_blank" rel="noopener noreferrer" class="primary">購入する</a>
+          <a href="https://x.gd/wueeO" target="_blank" rel="noopener noreferrer">SHOPを見る</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 상품 3 -->
+    <article class="product-card">
+      <img src="images/shop/menu3.png" alt="カレー 冷凍もつ煮（2人前）">
+      <div class="product-body">
+        <p class="product-name">もつ煮3パックセット　カレー×2味噌×1</p>
+        <p class="product-desc">この商品は、もつ煮カレー味が2パック、味噌味が1パックの合計3パックのセットです。
+500g✖︎3</p>
+        <p class="product-price">価格：¥2,700</p>
+        <div class="product-actions">
+          <a href="https://to.payid.jp/N4L9?deep_link_value=baseec%3A%2F%2Fitem%3Fitem_id%3D123341223&pid=app_share&c=share_item_yamitukimotu-base-shop&af_dp=baseec%3A%2F%2Fitem%3Fitem_id%3D123341223&is_retargeting=true&af_retargeting_window=30d&af_inactivity_window=7d&af_web_dp=https%3A%2F%2Fpayid.jp%2Fitem%2F123341223" target="_blank" rel="noopener noreferrer" class="primary">購入する</a>
+          <a href="https://x.gd/wueeO" target="_blank" rel="noopener noreferrer">SHOPを見る</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 상품 4 -->
+    <article class="product-card">
+      <img src="images/shop/menu4.png" alt="お得セット（3種食べ比べ）">
+      <div class="product-body">
+        <p class="product-name">もつ煮3パックセット　旨辛×1味噌×2</p>
+        <p class="product-desc">この商品は、旨辛×1味噌×2のもつ煮が3パックのセットです。
+500g✖︎3</p>
+        <p class="product-price">価格：¥2,700</p>
+        <div class="product-actions">
+          <a href="https://to.payid.jp/N4L9?deep_link_value=baseec%3A%2F%2Fitem%3Fitem_id%3D123340828&pid=app_share&c=share_item_yamitukimotu-base-shop&af_dp=baseec%3A%2F%2Fitem%3Fitem_id%3D123340828&is_retargeting=true&af_retargeting_window=30d&af_inactivity_window=7d&af_web_dp=https%3A%2F%2Fpayid.jp%2Fitem%2F123340828" target="_blank" rel="noopener noreferrer" class="primary">購入する</a>
+          <a href="https://x.gd/wueeO" target="_blank" rel="noopener noreferrer">SHOPを見る</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 상품 5 -->
+    <article class="product-card">
+      <img src="images/shop/menu5.png" alt="冷凍もつ煮（4人前）">
+      <div class="product-body">
+        <p class="product-name">もつ煮3パックセット　味噌×2カレー×1</p>
+        <p class="product-desc">この商品は、味噌味のもつ煮が1パック、カレー味のもつ煮が2パックの合計3パックのセットです。
+500g✖︎3</p>
+        <p class="product-price">価格：¥3,680</p>
+        <div class="product-actions">
+          <a href="https://to.payid.jp/N4L9?deep_link_value=baseec%3A%2F%2Fitem%3Fitem_id%3D123339899&pid=app_share&c=share_item_yamitukimotu-base-shop&af_dp=baseec%3A%2F%2Fitem%3Fitem_id%3D123339899&is_retargeting=true&af_retargeting_window=30d&af_inactivity_window=7d&af_web_dp=https%3A%2F%2Fpayid.jp%2Fitem%2F123339899" target="_blank" rel="noopener noreferrer" class="primary">購入する</a>
+          <a href="https://x.gd/wueeO" target="_blank" rel="noopener noreferrer">SHOPを見る</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 상품 6 -->
+    <article class="product-card">
+      <img src="images/shop/menu6.png" alt="ギフトセット（熨斗対応）">
+      <div class="product-body">
+        <p class="product-name">もつ煮3パックセット　味噌×1旨辛×2</p>
+        <p class="product-desc">この商品は、味噌味のもつ煮が1パック、旨辛味のもつ煮が2パックの合計3パックのセットです。
+500g✖︎3</p>
+        <p class="product-price">価格：¥2,700</p>
+        <div class="product-actions">
+          <a href="https://to.payid.jp/N4L9?deep_link_value=baseec%3A%2F%2Fitem%3Fitem_id%3D123339617&pid=app_share&c=share_item_yamitukimotu-base-shop&af_dp=baseec%3A%2F%2Fitem%3Fitem_id%3D123339617&is_retargeting=true&af_retargeting_window=30d&af_inactivity_window=7d&af_web_dp=https%3A%2F%2Fpayid.jp%2Fitem%2F123339617" target="_blank" rel="noopener noreferrer" class="primary">購入する</a>
+          <a href="https://x.gd/wueeO" target="_blank" rel="noopener noreferrer">SHOPを見る</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
 
   <main class="slider-container">
     <section id="udon" class="menu-section">
